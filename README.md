@@ -69,3 +69,5 @@ cd ../target && docker-compose down -v
 1. Ref to https://github.com/minio/minio/issues/15537: with `MINIO_ETCD_PATH_PREFIX` in target cluster, the replication works but deletions are not replicated.
 
 2. Ref to https://github.com/minio/minio/issues/15537: with a single central etcd server to source & target cluster, the replication works but deletions are not replicated.
+
+3. The target cluster must NOT use ETCD-based federation mode. Otherwise, the replication will not work correctly.
