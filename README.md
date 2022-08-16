@@ -62,3 +62,10 @@ docker network create laf_shared_network
 cd ./source && docker-compose down -v
 cd ../target && docker-compose down -v
 ```
+
+
+# issues
+
+1. Ref to https://github.com/minio/minio/issues/15537: with `MINIO_ETCD_PATH_PREFIX` in target cluster, the replication works but deletions are not replicated.
+
+2. Ref to https://github.com/minio/minio/issues/15537: with a single central etcd server to source & target cluster, the replication works but deletions are not replicated.
